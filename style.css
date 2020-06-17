@@ -173,6 +173,17 @@ h1, h2 {
 	}
 }
 
+/*customisations for tablets*/
+@media (max-width: 768px) {
+	.section2 {
+	text-align: center;
+	}
+
+	.header-section {
+	text-align: center;
+	}
+}
+
 /*customisations for medium screens*/
 @media (min-width: 500px) and (max-width: 1023px) {
 	.section2 {
@@ -222,4 +233,8 @@ h1, h2 {
 .row2 {
 	padding-left: 0;
 	padding-right: 0;
+}
+
+.img {
+	display: none;
 }
