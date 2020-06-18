@@ -52,7 +52,29 @@ label {
 }
 
 .nav-style a {
-	color: #333;
+	color: #083E9E;
+}
+
+.nav>li>a:hover {
+	text-decoration: underline;
+	background-color: transparent;
+}
+
+.nav-style li {
+	padding-left: 10px;
+}
+
+.menu-btn {
+    background-color: transparent;
+    border: 1px solid #414851;
+	margin-top: 2%;
+	padding: 10px 15px;
+	color: #083E9E;
+}
+
+.menu-btn:hover {
+    background-color: #083E9E;
+    color: white;
 }
 
 /* HEADER SECTION */
@@ -79,6 +101,20 @@ label {
 	justify-content: center;
 	align-items: center;
 	padding: 5%;
+}
+
+.form-control {
+	background-color: #e7f2f9;
+	border-radius: 4px;
+	padding: 3%;
+    height: auto;
+    border: none;
+}
+
+.form-control:hover {
+    border: 2px solid #14a0fb;
+    transition: all 0.1s ease-out 0.1s;
+	padding: 2.5%;
 }
 
 /* HOW DOES CALCULATOR WORK SECTION */
@@ -204,6 +240,16 @@ label {
 @media (min-width: 500px) and (max-width: 1023px) {
 	.section2 {
 	padding: 5% 50px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1023px) {
+	.header-align {
+	width: 100%;
+	}
+
+	.tablet-align {
+	text-align: center;
 	}
 }
 
