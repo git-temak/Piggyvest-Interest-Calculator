@@ -1,3 +1,4 @@
+/* UNIVERSAL SELECTOR */
 * {
 	margin: 0;
 	font-family: Josefin Sans;
@@ -6,11 +7,7 @@
 	box-sizing: border-box;
 }
 
-/*.navbar-style
-{
-	box-shadow: 0 5px 10px #efefef;
-}*/
-
+/* ELEMENT-WIDE STYLING */
 header {
 	padding: 20px 0 15px;
 }
@@ -19,6 +16,23 @@ body {
 	background: #fbfbfb;
 }
 
+ul {
+	list-style-type: none;
+	padding-inline-start: 0px;
+}
+
+a:hover, i:hover {
+	color: black;
+}
+
+h1, h2 {
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 114.5%;
+	color: #083E9E;
+}
+
+/* NAVIGATION MENU */
 .logo
 {
 	height: 50px;
@@ -34,6 +48,7 @@ body {
 	color: #333;
 }
 
+/* HEADER SECTION */
 .price-title {
 	font-size: 24px;
 	line-height: 24px;
@@ -53,6 +68,31 @@ body {
 	font-weight: 300;
 }
 
+.header-section {
+	justify-content: center;
+	align-items: center;
+	padding: 5%;
+}
+
+/* HOW DOES CALCULATOR WORK SECTION */
+.calc-section {
+	margin-top: 70px;
+}
+
+/*horizontally align section content to the middle*/
+.section2 {
+	align-items: center;
+}
+
+/* CREATE ACCOUNT/DOWNLOAD APP SECTION */
+.account-section {
+	width: auto;
+	justify-content: center;
+	align-items: center;
+	padding: 15% 10%;
+}
+
+/* FOOTER AREA */
 .footer {
 	background: #F1F6F9;
 	padding-top: 50px;
@@ -73,45 +113,7 @@ body {
 	padding-bottom: 12px;
 }
 
-ul {
-	list-style-type: none;
-	padding-inline-start: 0px;
-}
-
-/*new code*/
-.row {
-	margin: auto;
-}
-
-a:hover, i:hover {
-	color: black;
-}
-
-h1, h2 {
-	font-weight: 600;
-	font-size: 40px;
-	line-height: 114.5%;
-	color: #083E9E;
-}
-
-.header-section {
-/*	min-height: 500px;
-	width: auto;*/
-	justify-content: center;
-	align-items: center;
-	padding: 5%;
-}
-
-.row2 {
-	margin-top: 70px;
-}
-
-.section2 {
-	justify-content: center;
-	align-items: center;
-}
-
-/*Buttons*/
+/* BUTTONS */
 .green-btn {
 	background: #30C57B;
 	border-radius: 4px;
@@ -144,15 +146,13 @@ h1, h2 {
 	padding: 0 3px;
 }
 
-/*.store-btns {
-	width: 300px;
+/* IMAGES */
+.img-responsive {
+	display: initial;
 }
 
-.store-btn {
-	width: auto;
-	height: 25px;
-	padding: 0;
-}*/
+
+/*ALL RESPONSIVE CODES FOR DIFFERENT SCREEN SIZES GO HERE*/
 
 /*customisations for larger screens*/
 @media (min-width: 1024px) {
@@ -161,7 +161,7 @@ h1, h2 {
 	}
 
 	.cst-width {
-    margin-left: 120px;
+    margin-left: 100px;
 	}
 
 	.width-40{
@@ -170,6 +170,10 @@ h1, h2 {
 
 	.footer-right {
 	text-align: right;
+	}
+
+	.blue-btn {
+	margin-left: 6px;
 	}
 }
 
@@ -197,8 +201,8 @@ h1, h2 {
 		display: grid;
 	}
 
-	.btn {
-	height: auto;
+	.blue-btn {
+	padding: 3% 2%;
 	}
 }
 
@@ -209,32 +213,8 @@ h1, h2 {
 	}
 
 	.store-btn {
-	width: 100%;
+	width: 70%;
     height: auto;
+	padding: 10px;
 	}
-}
-
-.section3 {
-	min-height: 500px;
-	width: auto;
-	justify-content: center;
-	align-items: center;
-	padding-top: 10%;
-}
-
-.create-acc {
-	text-align: center;
-}
-
-.create-acc {
-	padding-bottom: 15%;
-}
-
-.row2 {
-	padding-left: 0;
-	padding-right: 0;
-}
-
-.img {
-	display: none;
 }
