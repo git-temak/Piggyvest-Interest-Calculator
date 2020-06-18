@@ -48,30 +48,37 @@
 				<form class="col-lg-10 col-sm-12">
 					<div class="form-group">
 						<label for="amount">Amount to Lock</label>
-						<input type="number" class="form-control" id="amount" placeholder="2500">
+						<input type="number" class="form-control" id="amount" placeholder="2500" required>
 					</div>
 					<div class="form-group">
 						<label for="duration">Duration</label>
-						<select class="form-control" id="duration">
+						<select class="form-control" id="saving-plan" required>
 							<option selected="Duration">Select Duration of Lock</option>
-							<option>Piggybank</option>
-      						<option>Flex Naira</option>
-						    <option>Safelock</option>
-						    <option>Targets</option>
-						    <option>Flex Dollar</option>
+							<option value="piggybank">Piggybank</option>
+      						<option value="flex_naira">Flex Naira</option>
+						    <option value="safelock">Safelock</option>
+						    <option value="targets">Targets</option>
+						    <option value="flex_dollar">Flex Dollar</option>
 						</select>
 					</div>
 					<div class="form-group">
-						<label for="payback">Payback Date</label>
-						<input class="form-control" name="payback" placeholder="Select Date" type="text" id="payback">
+						<label for="duration">Duration (in months)</label>
+						<input type="number" max='12' ondrop='return false;' onpaste='return false;' class="form-control" id="duration" placeholder="number of months" required>
 					</div>
 					<!-- <div class="form-group">
-        				<button class="btn btn-primary" name="submit" type="submit">Calculate Interest</button>
-      				</div> -->
+						<label for="payback">Payback Date</label>
+						<input class="form-control" name="payback" placeholder="Select Date" type="text" id="payback">
+					</div> -->
+					<div class="form-group p-5">
+						<button onclick="calculateInterest()" class="btn btn-primary buttons" type='button'>Calculate Interest</button>
+      				</div>
 				</form>
 				<div class="col-lg-10 col-sm-12 text-center">
 					<h2 class="price-title">Estimated Balance</h2>
-					<p class="price">NGN 12,000</p>
+
+					<!-- The Result -->
+					<p class="price" id="demo2">-----------</p>
+
 				</div>
 			</div>
 		</div>
@@ -166,6 +173,7 @@
 
 	<!-- Form Datepicker Script -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
 	<script>
     $(document).ready(function(){
       var date_input=$('input[name="payback"]'); //our date input has the name "date"
@@ -180,5 +188,6 @@
       date_input.datepicker(options);
     })
 	</script>
+
 </body>
 </html>
