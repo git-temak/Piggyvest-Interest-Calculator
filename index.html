@@ -5,11 +5,12 @@
 	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>PiggyCalc - Your Simple Savings Calculator</title>
 </head>
 <body>
-	<!-- navigation menu -->
+	<!-- NAVIGATION MENU -->
 	<header class="header">
 		<nav class="navbar navbar-style">
 			<div class="container">
@@ -36,7 +37,7 @@
 		</nav>
 	</header>
 
-	<!-- header section -->
+	<!-- HEADER SECTION -->
 	<div class="container-fluid">
 		<div class="row header-section">
 			<div class="col-sm-12 col-md-6 col-lg-6">
@@ -45,9 +46,28 @@
 			</div>
 			<div class="col-sm-12 col-md-6 col-lg-6 width-40">
 				<form>
-					<input type="number" name="">
-					<input type="number" name="">
-					<input type="datepicker" name="">
+					<div class="form-group">
+						<label for="amount">Amount to Lock</label>
+						<input type="number" class="form-control" id="amount" placeholder="2500">
+					</div>
+					<div class="form-group">
+						<label for="duration">Duration</label>
+						<select class="form-control" id="duration">
+							<option selected="Duration">Select Duration of Lock</option>
+							<option>Piggybank</option>
+      						<option>Flex Naira</option>
+						    <option>Safelock</option>
+						    <option>Targets</option>
+						    <option>Flex Dollar</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="payback">Payback Date</label>
+						<input class="form-control" name="payback" placeholder="Select Date" type="text" id="payback">
+					</div>
+					<!-- <div class="form-group">
+        				<button class="btn btn-primary" name="submit" type="submit">Calculate Interest</button>
+      				</div> -->
 				</form>
 				<div class="text-center">
 					<h2 class="price-title">Estimated Balance</h2>
@@ -57,7 +77,7 @@
 		</div>
 	</div>
 
-	<!-- how calculator works section -->
+	<!-- HOW CALCULATOR WORKS SECTION -->
 	<div class="container calc-section">
 		<h2 class="text-center">How does the calculator work</h2>
 		<div class="row section2">
@@ -73,27 +93,27 @@
 		</div>
 	</div>
 
-	<!-- create account section -->
+	<!-- CREATE ACCOUNT SECTION -->
 	<div class="container account-section text-center">
-		<div class="col-md-12 create-acc">
+		<div class="row">
 			<h2>Over ₦1,000,000,000 securely saved every month</h2>
 			<p>PiggyVest uses bank-level security measures to keep your data safe.</p>
 			<p>PiggyVest users save & invest well over a billion every single month, and they are just getting started.</p>
-			<div class="row">
-				<div class="col-md-5"></div>
-				<button class="col-md-2 btn blue-btn">Create Account for Free</button>
-				<div class="col-md-5"></div>
-			</div>
-			<div class="row buttons">
-				<div class="col-sm-2 col-md-4 col-lg-5"></div>
-				<a href="#"><img class="col-sm-4 col-md-2 col-lg-1 img-responsive store-btn" src="img/astore.png"></a>
-				<a href="#"><img class="col-sm-4 col-md-2 col-lg-1 img-responsive store-btn" src="img/gplay.png"></a>
-				<div class="col-sm-2 col-md-4 col-lg-5"></div>
-			</div>
+		</div>
+
+		<div class="row">
+			<button class="btn blue-btn">Create Account for Free</button>
+		</div>
+	
+		<div class="row buttons">
+			<div class="col-sm-2 col-md-4 col-lg-5"></div>
+			<a href="#"><img class="col-sm-4 col-md-2 col-lg-1 img-responsive store-btn" src="img/astore.png"></a>
+			<a href="#"><img class="col-sm-4 col-md-2 col-lg-1 img-responsive store-btn" src="img/gplay.png"></a>
+			<div class="col-sm-2 col-md-4 col-lg-5"></div>
 		</div>
 	</div>
 
-		<!-- footer section -->
+	<!-- FOOTER SECTION -->
 	<footer>
 		<div class="row footer">
 			<div class="container">
@@ -143,5 +163,22 @@
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+	<!-- Form Datepicker Script -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+	<script>
+    $(document).ready(function(){
+      var date_input=$('input[name="payback"]'); //our date input has the name "date"
+      var container=$('.bootstrap-iso form').length>0 ? $('.width-40 form').parent() : "body";
+      var options={
+        format: 'dd/mm/yyyy',
+        container: container,
+        todayHighlight: true,
+        autoclose: true,
+        startDate: new Date(),
+      };
+      date_input.datepicker(options);
+    })
+	</script>
 </body>
 </html>

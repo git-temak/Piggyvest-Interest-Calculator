@@ -9,7 +9,7 @@
 
 /* ELEMENT-WIDE STYLING */
 header {
-	padding: 20px 0 15px;
+	padding: 20px 15px;
 }
 
 body {
@@ -32,6 +32,13 @@ h1, h2 {
 	color: #083E9E;
 }
 
+label {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 24px;
+	margin-top: 20px;
+}
+
 /* NAVIGATION MENU */
 .logo
 {
@@ -52,7 +59,7 @@ h1, h2 {
 .price-title {
 	font-size: 24px;
 	line-height: 24px;
-	margin: 5% 0;
+	margin: 10% 0 5%;
 }
 
 .price {
@@ -76,23 +83,23 @@ h1, h2 {
 
 /* HOW DOES CALCULATOR WORK SECTION */
 .calc-section {
-	margin-top: 70px;
+	margin-top: 10%;
 }
 
-/*horizontally align section content to the middle*/
+/* HORIZONTALLY ALIGN CONTENT TO MIDDLE */
 .section2 {
 	align-items: center;
 }
 
-/* CREATE ACCOUNT/DOWNLOAD APP SECTION */
+/* CREATE ACCOUNT-DOWNLOAD APP SECTION */
 .account-section {
 	width: auto;
 	justify-content: center;
 	align-items: center;
-	padding: 15% 10%;
+	padding: 10%;
 }
 
-/* FOOTER AREA */
+/* FOOTER SECTION */
 .footer {
 	background: #F1F6F9;
 	padding-top: 50px;
@@ -152,9 +159,9 @@ h1, h2 {
 }
 
 
-/*ALL RESPONSIVE CODES FOR DIFFERENT SCREEN SIZES GO HERE*/
+/* ALL RESPONSIVE CODES FOR DIFFERENT SCREEN SIZES GO HERE */
 
-/*customisations for larger screens*/
+/* CUSTOMISATIONS FOR LARGER SCREENS */
 @media (min-width: 1024px) {
 	.header-section, .section2 {
 		display: flex;
@@ -166,6 +173,7 @@ h1, h2 {
 
 	.width-40{
 	max-width: 40%;
+	margin-top: 10%;
 	}
 
 	.footer-right {
@@ -175,9 +183,13 @@ h1, h2 {
 	.blue-btn {
 	margin-left: 6px;
 	}
+
+	h1 {
+	width: 80%;
+	}
 }
 
-/*customisations for tablets*/
+/* CUSTOMISATIONS FOR TABLETS */
 @media (max-width: 768px) {
 	.section2 {
 	text-align: center;
@@ -188,14 +200,14 @@ h1, h2 {
 	}
 }
 
-/*customisations for medium screens*/
+/* CUSTOMISATIONS FOR MEDIUM SCREENS */
 @media (min-width: 500px) and (max-width: 1023px) {
 	.section2 {
 	padding: 5% 50px;
 	}
 }
 
-/*customisations for smaller screens*/
+/* CUSTOMISATIONS FOR SMALLER SCREENS */
 @media (max-width: 1023px) {
 	.header-section, .footer {
 		display: grid;
@@ -206,15 +218,24 @@ h1, h2 {
 	}
 }
 
-/*customisations for mobile phones*/
+/* CUSTOMISATIONS FOR MOBILE PHONES */
 @media (max-width: 414px) {
 	.header-section {
 		padding-bottom: 20px;
 	}
+}
 
+/* ADDITIONAL CUSTOMISATIONS */
+@media (max-width: 767px) {
 	.store-btn {
-	width: 70%;
+	width: 60%;
     height: auto;
 	padding: 10px;
+	}
+}
+
+@media (max-width: 991px) {
+	.header-section, .section2 {
+		text-align: center;
 	}
 }
